@@ -73,6 +73,7 @@ blog_default_language = 'zh'
 # 帖子的日期格式。默认 ``'%b %d, %Y'``
 #  ``datetime.date.strftime()`` 的参数
 post_date_format = '%c'
+post_date_format_short = '%b %d, %Y'
 
 # 将作为文章摘录显示的段落数（默认为 ``1``）。
 # 设置此 ``0`` 将导致在存档页面中不显示帖子摘录。
