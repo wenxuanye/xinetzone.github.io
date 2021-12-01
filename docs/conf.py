@@ -149,7 +149,7 @@ html_css_files = ["default.css"]
 
 # -- 国际化输出 ----------------------------------------------------------------
 
-locale_dirs = ['../locales/']  # path is example but recommended.
+# locale_dirs = ['../locales/']  # path is example but recommended.
 gettext_compact = False  # optional.
 
 # -- 主题设置 -------------------------------------------------------------------
