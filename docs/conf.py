@@ -148,7 +148,7 @@ html_static_path = ['_static']
 html_css_files = ["default.css"]
 
 # -- 国际化输出 ----------------------------------------------------------------
-
+language = 'zh_CN'
 # locale_dirs = ['../locales/']  # path is example but recommended.
 gettext_compact = False  # optional.
 
