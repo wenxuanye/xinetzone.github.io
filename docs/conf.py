@@ -110,9 +110,7 @@ extlinks = {
     #           'directives.html#%s', ''),
     'github': ('https://github.com/%s', ''),
     'daobook': ('https://daobook.github.io/%s', ''),
-    'sphinx-locales': ('https://sphinx-locales.github.io/%s', ''),
-    'ablog': ('https://daobook.github.io/ablog/zh-CN/%s', ''),
-    'docutils': ('https://daobook.github.io/docutils/%s', '')
+    'xinetzone': ('https://xinetzone.github.io/%s', ''),
 }
 
 intersphinx_mapping = {
@@ -179,7 +177,7 @@ html_sidebars = {
 
 extra_navbar = """<p>
     版权所有 © 2021
-    <a href="https://xinetzone.github.io/">Dao Book</a>
+    <a href="https://xinetzone.github.io/">xinetzone</a>
 </p>
 <p>
     由 <a href="https://ebp.jupyterbook.org/">EBP</a> 
@@ -239,7 +237,7 @@ html_logo = 'logo.jpg'
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = "favicon.png"
+html_favicon = "page-logo.jfif"
 
 # -- 自定义网站的标题 --------------
 # html_title = '动手学习 Python'
