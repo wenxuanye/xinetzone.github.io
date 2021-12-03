@@ -1,5 +1,7 @@
 # 项目
 
 ```{toctree}
-daily-notes
+:glob:
+
+*
 ```
