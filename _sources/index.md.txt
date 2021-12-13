@@ -1,5 +1,3 @@
-# 上善若水
-
 ```{include} ../README.md
 ```
 
@@ -11,7 +9,7 @@ projects/index
 about/index
 ```
 
-## 索引和表格
+# 索引和表格
 
 * {ref}`genindex`
 * {ref}`modindex`
