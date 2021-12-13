@@ -1,4 +1,4 @@
 # 无人驾驶
 
-{guilabel}`预览`：{daobook}`self-driving-car`
+{guilabel}`预览`：{xinetzone}`self-driving-car`
 

@@ -1,4 +1,4 @@
 # 人生笔记
 
-{guilabel}`预览`：{daobook}`daily-notes`
+{guilabel}`预览`：{xinetzone}`daily-notes`
 
