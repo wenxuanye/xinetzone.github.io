@@ -7,6 +7,8 @@
 
 projects/index
 about/index
+help/index
+draft/index
 ```
 
 # 索引和表格

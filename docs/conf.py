@@ -45,6 +45,7 @@ extensions = [
     "sphinx_comments",
     "sphinx_panels",
     "sphinx_inline_tabs",
+    "sphinxcontrib.bibtex"
     # "sphinx.ext.todo",
     # "sphinxcontrib.bibtex",
     # "sphinx_togglebutton",
@@ -117,7 +118,9 @@ intersphinx_mapping = {
     'python': ('https://daobook.github.io/cpython', None),
     'sphinx': ('https://daobook.github.io/sphinx', None),
     'peps': ('https://daobook.github.io/peps', None),
+    'wiki': ('https://xinetzone.github.io/wiki/', None)
 }
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates', ablog.get_html_templates_path()]
