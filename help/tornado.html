@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>关于 &#8212; xinetzone 0.0.1 文档</title>
+    <title>tornado &#8212; xinetzone 0.0.1 文档</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -92,8 +92,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="行为准则" href="../CODE_OF_CONDUCT.html" />
-    <link rel="prev" title="sphinx-demo" href="../projects/sphinx-demo.html" /> 
+    <link rel="next" title="在 Ubuntu20.04 上搭建深度学习环境" href="ubuntu-ai.html" />
+    <link rel="prev" title="深度学习多系统多框架环境配置" href="build-dl.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -200,11 +200,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../about/index.html">
    关于
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
@@ -226,39 +226,39 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="bibliography.html">
+    <a class="reference internal" href="../about/bibliography.html">
      参考文献
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../help/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    帮助
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/build-ai.html">
+    <a class="reference internal" href="build-ai.html">
      从零开始搭建 AI 环境
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/build-dl.html">
+    <a class="reference internal" href="build-dl.html">
      深度学习多系统多框架环境配置
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../help/tornado.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      tornado
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/ubuntu-ai.html">
+    <a class="reference internal" href="ubuntu-ai.html">
      在 Ubuntu20.04 上搭建深度学习环境
     </a>
    </li>
@@ -345,7 +345,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/about/index.md.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/help/tornado.md.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -365,10 +365,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/xinetzone.github.io/issues/new?title=Issue%20on%20page%20%2Fabout/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/xinetzone.github.io/issues/new?title=Issue%20on%20page%20%2Fhelp/tornado.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/xinetzone/xinetzone.github.io/edit/main/docs/about/index.md"><button
+        <a class="edit-button" href="https://github.com/xinetzone/xinetzone.github.io/edit/main/docs/help/tornado.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -388,6 +388,25 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 导航
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tornado-windowsselectoreventlooppolicy-windows">
+   tornado 使用
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     WindowsSelectorEventLoopPolicy()
+    </span>
+   </code>
+   报错（Windows）
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -395,9 +414,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>关于<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="toctree-wrapper compound">
+                 <div class="tex2jax_ignore mathjax_ignore section" id="tornado">
+<h1>tornado<a class="headerlink" href="#tornado" title="永久链接至标题">¶</a></h1>
+<div class="section" id="tornado-windowsselectoreventlooppolicy-windows">
+<h2>tornado 使用 <code class="docutils literal notranslate"><span class="pre">WindowsSelectorEventLoopPolicy()</span></code> 报错（Windows）<a class="headerlink" href="#tornado-windowsselectoreventlooppolicy-windows" title="永久链接至标题">¶</a></h2>
+<p>或者报：in add_reader raise NotImplementedError NotImplementedError</p>
+<p>参考 <a class="reference external" href="https://github.com/tornadoweb/tornado/issues/2608">Prepare for python 3.8 on windows · Issue #2608 · tornadoweb/tornado (github.com)</a></p>
+<p>处理方法：在 <code class="docutils literal notranslate"><span class="pre">C:\Users\用户名\conda</span> <span class="pre">路径\Lib\site-packages\tornado\platform\asyncio.py</span></code> 中添加如下代码：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;win32&#39;</span><span class="p">:</span>
+    <span class="n">asyncio</span><span class="o">.</span><span class="n">set_event_loop_policy</span><span class="p">(</span><span class="n">asyncio</span><span class="o">.</span><span class="n">WindowsSelectorEventLoopPolicy</span><span class="p">())</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -414,7 +441,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./about"
+            path: "./help"
         },
         predefinedOutput: true
     }
@@ -429,17 +456,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../projects/sphinx-demo.html" title="上一页 页">
+    <a class='left-prev' id="prev-link" href="build-dl.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">sphinx-demo</p>
+            <p class="prev-next-title">深度学习多系统多框架环境配置</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../CODE_OF_CONDUCT.html" title="下一页 页">
+    <a class='right-next' id="next-link" href="ubuntu-ai.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">行为准则</p>
+        <p class="prev-next-title">在 Ubuntu20.04 上搭建深度学习环境</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

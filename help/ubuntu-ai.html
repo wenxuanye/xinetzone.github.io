@@ -1,0 +1,637 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>在 Ubuntu20.04 上搭建深度学习环境 &#8212; xinetzone 0.0.1 文档</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/xinetzone.github.io");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".cell"
+        const thebe_selector_input = ".cell_input div.highlight"
+        const thebe_selector_output = ".cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="回收站" href="../draft/index.html" />
+    <link rel="prev" title="tornado" href="tornado.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../posts/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">xinetzone 0.0.1 文档</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   项目
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/cpp-book.html">
+     C++ 书
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/daily-notes.html">
+     人生笔记
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/mathbook.html">
+     数学书
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/self-driving-car.html">
+     无人驾驶
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/sphinx-demo.html">
+     sphinx-demo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../about/index.html">
+   关于
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../CODE_OF_CONDUCT.html">
+     行为准则
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../CONTRIBUTING.html">
+     贡献
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SECURITY.html">
+     安全策略
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../about/bibliography.html">
+     参考文献
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   帮助
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="build-ai.html">
+     从零开始搭建 AI 环境
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="build-dl.html">
+     深度学习多系统多框架环境配置
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tornado.html">
+     tornado
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     在 Ubuntu20.04 上搭建深度学习环境
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../draft/index.html">
+   回收站
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../draft/book.html">
+     学习资源
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../draft/draft.html">
+     临时资料
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../draft/tools/index.html">
+     常用工具
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../draft/todo/index.html">
+     个人任务
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <p>
+    版权所有 © 2021
+    <a href="https://xinetzone.github.io/">xinetzone</a>
+</p>
+<p>
+    由 <a href="https://ebp.jupyterbook.org/">EBP</a> 
+    提供技术支持
+</p>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/help/ubuntu-ai.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/xinetzone.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/xinetzone.github.io/issues/new?title=Issue%20on%20page%20%2Fhelp/ubuntu-ai.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/xinetzone/xinetzone.github.io/edit/main/docs/help/ubuntu-ai.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 导航
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   初级配置
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gpu">
+   配置 GPU
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="ubuntu20-04">
+<h1>在 Ubuntu20.04 上搭建深度学习环境<a class="headerlink" href="#ubuntu20-04" title="永久链接至标题">¶</a></h1>
+<p>首先 <a class="reference external" href="https://ubuntu.com/download/desktop">下载 Ubuntu Desktop</a>，然后使用 <a class="reference external" href="https://rufus.ie/">rufs</a> 制作 U 盘启动盘，并作如下配置：</p>
+<a class="w3-card-4 reference internal image-reference" href="../_images/rufs.png"><img alt="fishy" class="w3-card-4" src="../_images/rufs.png" style="height: 500px;" /></a>
+<p>最后，便可以安装 Ubuntu 了。</p>
+<p>安装完毕之后需要做一些配置。</p>
+<div class="section" id="id1">
+<h2>初级配置<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>智能升级。安装新软件包并删除废弃的软件包：</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get dist-upgrade
+$ sudo apt-get autoremove
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>删除一些不需要的内置软件：</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get remove libreoffice-common
+$ sudo apt-get remove unity-webapps-common
+$ sudo apt-get autoremove
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>更新和升级系统</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
+$ sudo apt upgrade
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>安装 Git</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install git
+</pre></div>
+</div>
+<p>配置 git 的两个重要信息，<code class="docutils literal notranslate"><span class="pre">user.name</span></code> 和 <code class="docutils literal notranslate"><span class="pre">user.email</span></code>，终端输入如下命令即可设置</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ git config --global user.name <span class="s2">&quot;Your Name&quot;</span>
+$ git config --global user.email <span class="s2">&quot;email@example.com&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>支持挂载 exfat</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install exfat-fuse
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>安装 g++ gcc 开发必备编译库（为之后安装 CUDA 做准备）</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install build-essential
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>为了支持 ssh server，需要：</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install openssh-server
+$ sudo /etc/init.d/ssh start
+$ sudo service ssh start
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>为了防止 Ubuntu 系统被玩坏了，我们需要一个可以进行备份和还原的工具：TimeShift</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo apt-add-repository -y ppa:teejee2008/ppa
+$ sudo apt update
+$ sudo apt install timeshift
+</pre></div>
+</div>
+</div>
+<div class="section" id="gpu">
+<h2>配置 GPU<a class="headerlink" href="#gpu" title="永久链接至标题">¶</a></h2>
+<p>安装最新的 Nvidia 驱动程序：</p>
+<p><img alt="" src="../_images/ubuntu-gpu.png" /></p>
+<p>下面使用 <a class="reference external" href="https://xinetzone.github.io/wiki/glossary/soft.html#term-MobaXterm" title="(在 Python)"><span class="xref std std-term">MobaXterm</span></a> 远程操作 Ubuntu。</p>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">查看显卡型号</span></span></dt>
+<dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>lspci <span class="p">|</span> grep -i nvidia 
+</pre></div>
+</div>
+<p>输出：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">02</span><span class="p">:</span><span class="mf">00.0</span> <span class="n">VGA</span> <span class="n">compatible</span> <span class="n">controller</span><span class="p">:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">TU102</span> <span class="p">[</span><span class="n">GeForce</span> <span class="n">RTX</span> <span class="mi">2080</span> <span class="n">Ti</span><span class="p">]</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>
+<span class="mi">02</span><span class="p">:</span><span class="mf">00.1</span> <span class="n">Audio</span> <span class="n">device</span><span class="p">:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">TU102</span> <span class="n">High</span> <span class="n">Definition</span> <span class="n">Audio</span> <span class="n">Controller</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>
+<span class="mi">02</span><span class="p">:</span><span class="mf">00.2</span> <span class="n">USB</span> <span class="n">controller</span><span class="p">:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">TU102</span> <span class="n">USB</span> <span class="mf">3.1</span> <span class="n">Host</span> <span class="n">Controller</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>
+<span class="mi">02</span><span class="p">:</span><span class="mf">00.3</span> <span class="n">Serial</span> <span class="n">bus</span> <span class="n">controller</span> <span class="p">[</span><span class="mi">0</span><span class="n">c80</span><span class="p">]:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">TU102</span> <span class="n">USB</span> <span class="n">Type</span><span class="o">-</span><span class="n">C</span> <span class="n">UCSI</span> <span class="n">Controller</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">查看驱动版本</span></span></dt>
+<dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo dpkg --list <span class="p">|</span> grep nvidia-* 
+</pre></div>
+</div>
+<p>输出：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">02</span><span class="p">:</span><span class="mf">00.0</span> <span class="n">VGA</span> <span class="n">compatible</span> <span class="n">controller</span><span class="p">:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">TU102</span> <span class="p">[</span><span class="n">GeForce</span> <span class="n">RTX</span> <span class="mi">2080</span> <span class="n">Ti</span><span class="p">]</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>
+<span class="mi">02</span><span class="p">:</span><span class="mf">00.1</span> <span class="n">Audio</span> <span class="n">device</span><span class="p">:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">TU102</span> <span class="n">High</span> <span class="n">Definition</span> <span class="n">Audio</span> <span class="n">Controller</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>
+<span class="mi">02</span><span class="p">:</span><span class="mf">00.2</span> <span class="n">USB</span> <span class="n">controller</span><span class="p">:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">TU102</span> <span class="n">USB</span> <span class="mf">3.1</span> <span class="n">Host</span> <span class="n">Controller</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>
+<span class="mi">02</span><span class="p">:</span><span class="mf">00.3</span> <span class="n">Serial</span> <span class="n">bus</span> <span class="n">controller</span> <span class="p">[</span><span class="mi">0</span><span class="n">c80</span><span class="p">]:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">TU102</span> <span class="n">USB</span> <span class="n">Type</span><span class="o">-</span><span class="n">C</span> <span class="n">UCSI</span> <span class="n">Controller</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p><strong>重启</strong>（此时重启最为重要）电脑查看 Nouveau 是否被禁用（<strong>这里应该是没有任何的输出的</strong>）（这是最关键的一步）：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>lsmod <span class="p">|</span> grep nouveau 
+</pre></div>
+</div>
+<blockquote>
+<div><p>若有输出则说明 Nouveau 还在使用。做深度学习，要用到 NVIDIA 的显卡，因此需要改显卡驱动，禁用<code class="docutils literal notranslate"><span class="pre">nouveau</span></code>。即以管理员是身份打开 <code class="docutils literal notranslate"><span class="pre">/etc/modprobe.d/blacklist.conf</span></code> 文件，然后添加内容：<code class="docutils literal notranslate"><span class="pre">blacklist</span> <span class="pre">nouveau</span>&#160; <span class="pre">#添加数据</span></code> 用来禁用 <code class="docutils literal notranslate"><span class="pre">nouveau</span></code>。而打开文件我们可以使用 vscode 进行文件编辑：</p>
+</div></blockquote>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo code /etc/modprobe.d/blacklist.conf
+</pre></div>
+</div>
+<p>验证 GPU 驱动是否正确安装：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ nvidia-smi
+$ nvidia-settings
+</pre></div>
+</div>
+<p>出现下图便表示安装成功：</p>
+<p><img alt="" src="../_images/gpu-check.png" /></p>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">安装</span> <span class="pre">CUDA</span> <span class="pre">11.3</span></span></dt>
+<dd><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ wget https://developer.download.nvidia.com/compute/cuda/11.3.1/local_installers/cuda_11.3.1_465.19.01_linux.run
+$ sudo sh cuda_11.3.1_465.19.01_linux.run
+</pre></div>
+</div>
+<p>因为我们已经安装了 Nvidia 驱动，会提醒移除，此时我们先 Continue，然后选掉 Driver：</p>
+<p><img alt="" src="../_images/remove-driver.png" /></p>
+<p>安装完毕，会显示：</p>
+<p><img alt="" src="../_images/cuda.png" /></p>
+</dd></dl>
+
+<p>警告里面关于 CUDA driver 的内容不用管，说的就是没装 NVIDIA driver。</p>
+<p>配置环境变量中的路径变量(PATH)：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo gedit ~/.bashrc
+</pre></div>
+</div>
+<p>在最后一行加入路径：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/cuda-11.3/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/cuda-11.3/lib64:</span><span class="nv">$LD_LIBRARY_PATH</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>保存之后，为了使这个修改立即生效，还需要输入如下代码（如果不执行 source 命令，则需重启系统才能生效）：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+<p>此时便可以查看 CUDA 版本：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ nvcc -V
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/xinetzone.github.io",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./help"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+<div class="section">
+   
+</div>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="tornado.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">tornado</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../draft/index.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">回收站</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By xinetzone<br/>
+        
+            &copy; Copyright 2021, xinetzone.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

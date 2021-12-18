@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>关于 &#8212; xinetzone 0.0.1 文档</title>
+    <title>深度学习多系统多框架环境配置 &#8212; xinetzone 0.0.1 文档</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -92,8 +92,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="行为准则" href="../CODE_OF_CONDUCT.html" />
-    <link rel="prev" title="sphinx-demo" href="../projects/sphinx-demo.html" /> 
+    <link rel="next" title="tornado" href="tornado.html" />
+    <link rel="prev" title="从零开始搭建 AI 环境" href="build-ai.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -200,11 +200,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../about/index.html">
    关于
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
@@ -226,39 +226,39 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="bibliography.html">
+    <a class="reference internal" href="../about/bibliography.html">
      参考文献
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../help/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    帮助
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/build-ai.html">
+    <a class="reference internal" href="build-ai.html">
      从零开始搭建 AI 环境
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../help/build-dl.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      深度学习多系统多框架环境配置
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/tornado.html">
+    <a class="reference internal" href="tornado.html">
      tornado
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../help/ubuntu-ai.html">
+    <a class="reference internal" href="ubuntu-ai.html">
      在 Ubuntu20.04 上搭建深度学习环境
     </a>
    </li>
@@ -345,7 +345,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/about/index.md.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/help/build-dl.md.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -365,10 +365,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/xinetzone.github.io/issues/new?title=Issue%20on%20page%20%2Fabout/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/xinetzone.github.io/issues/new?title=Issue%20on%20page%20%2Fhelp/build-dl.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/xinetzone/xinetzone.github.io/edit/main/docs/about/index.md"><button
+        <a class="edit-button" href="https://github.com/xinetzone/xinetzone.github.io/edit/main/docs/help/build-dl.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -396,8 +396,92 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>关于<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="toctree-wrapper compound">
+<h1>深度学习多系统多框架环境配置<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>以 <a class="reference internal" href="build-ai.html"><span class="doc">从零开始搭建 AI 环境</span></a> 为基础配置深度学习 GPU 环境。</p>
+<ol class="simple">
+<li><p>Windows10 系统需要安装 <a class="reference external" href="https://visualstudio.microsoft.com/zh-hans/vs/">Visual Studio 2019 IDE</a> 以提供 C/C++ 的支持。</p></li>
+<li><p>如果需要 GPU 配置的话，还要安装 <a class="reference external" href="https://developer.nvidia.com/cuda-downloads">CUDA Toolkit 11.3 Update 1</a>。</p></li>
+</ol>
+<div class="admonition-mxnet admonition">
+<p class="admonition-title">MXnet</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda create -n mx <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+conda activate mx
+</pre></div>
+</div>
+<div class="tabbed-set docutils">
+<input checked="checked" id="a2b6e81f-8ee6-471d-9f77-e70560bd43b7" name="532f9827-5a45-432b-b250-804b84e29659" type="radio">
+</input><label class="tabbed-label" for="a2b6e81f-8ee6-471d-9f77-e70560bd43b7">
+GPU</label><div class="tabbed-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install <span class="nv">cudatoolkit</span><span class="o">=</span><span class="m">10</span>.2 <span class="c1">#（Windows）</span>
+pip install mxnet-cu102 <span class="c1"># （Windows）</span>
+conda install <span class="nv">cudatoolkit</span><span class="o">=</span><span class="m">11</span>.0 <span class="c1">#（linux）</span>
+<span class="c1"># pip install mxnet-cu110 （linux）</span>
+</pre></div>
+</div>
+</div>
+<input id="2fbf7bbe-b895-4e2f-b461-dda7874d4f86" name="532f9827-5a45-432b-b250-804b84e29659" type="radio">
+</input><label class="tabbed-label" for="2fbf7bbe-b895-4e2f-b461-dda7874d4f86">
+CPU</label><div class="tabbed-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install mxnet
+</pre></div>
+</div>
+</div>
+</div>
+<p>配置 Jupyter 内核</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install ipykernel
+python -m ipykernel install --name mx --display-name <span class="s2">&quot;MXNet&quot;</span> <span class="o">(</span>--user<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-tensorflow admonition">
+<p class="admonition-title">Tensorflow</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda create -n tf <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+conda activate tf
+</pre></div>
+</div>
+<div class="tabbed-set docutils">
+<input checked="checked" id="c1facc4b-f7ad-44eb-b417-ab25171975a2" name="f51163df-846d-4caa-8e8f-2bfe160446e4" type="radio">
+</input><label class="tabbed-label" for="c1facc4b-f7ad-44eb-b417-ab25171975a2">
+GPU</label><div class="tabbed-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install <span class="nv">cudatoolkit</span><span class="o">=</span><span class="m">11</span>.1 <span class="nv">cudnn</span><span class="o">=</span><span class="m">8</span> -c conda-forge
+</pre></div>
+</div>
+</div>
+</div>
+<p>配置 Jupyter 内核</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install tensorflow tensorflow-probability
+conda install ipykernel
+python -m ipykernel install --name tf --display-name <span class="s2">&quot;TensorFlow&quot;</span> <span class="o">(</span>--user<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-pytorch admonition">
+<p class="admonition-title">Pytorch</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda create -n torch <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+conda activate torch
+</pre></div>
+</div>
+<div class="tabbed-set docutils">
+<input checked="checked" id="8cbbcf97-bcdf-415d-9083-578b738ee0ab" name="e809c6b1-7e08-4a9b-b1ef-c4739eccaa38" type="radio">
+</input><label class="tabbed-label" for="8cbbcf97-bcdf-415d-9083-578b738ee0ab">
+GPU</label><div class="tabbed-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install pytorch torchvision torchaudio <span class="nv">cudatoolkit</span><span class="o">=</span><span class="m">11</span>.1 -c pytorch -c conda-forge
+</pre></div>
+</div>
+</div>
+<input id="da158ff3-bb56-46bb-9fb2-1bdc8fddd3d3" name="e809c6b1-7e08-4a9b-b1ef-c4739eccaa38" type="radio">
+</input><label class="tabbed-label" for="da158ff3-bb56-46bb-9fb2-1bdc8fddd3d3">
+CPU</label><div class="tabbed-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install torch torchvision
+</pre></div>
+</div>
+</div>
+</div>
+<p>配置 Jupyter 内核</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install ipykernel
+python -m ipykernel install --name torch --display-name <span class="s2">&quot;Pytorch&quot;</span> <span class="o">(</span>--user<span class="o">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -414,7 +498,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./about"
+            path: "./help"
         },
         predefinedOutput: true
     }
@@ -429,17 +513,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../projects/sphinx-demo.html" title="上一页 页">
+    <a class='left-prev' id="prev-link" href="build-ai.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">sphinx-demo</p>
+            <p class="prev-next-title">从零开始搭建 AI 环境</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../CODE_OF_CONDUCT.html" title="下一页 页">
+    <a class='right-next' id="next-link" href="tornado.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">行为准则</p>
+        <p class="prev-next-title">tornado</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

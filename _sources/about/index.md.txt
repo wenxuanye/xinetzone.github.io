@@ -7,4 +7,5 @@
 ../CODE_OF_CONDUCT
 ../CONTRIBUTING
 ../SECURITY
+bibliography
 ```
