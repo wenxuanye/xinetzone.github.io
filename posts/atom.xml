@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://xinetzone.github.io</id>
   <title>Blog</title>
-  <updated>2022-01-02T02:46:29.988743+00:00</updated>
+  <updated>2022-01-07T06:57:10.446947+00:00</updated>
   <link href="https://xinetzone.github.io"/>
   <link href="https://xinetzone.github.io/zh_CN/posts/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.22">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
 </feed>
