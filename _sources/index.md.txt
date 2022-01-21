@@ -5,7 +5,7 @@
 :maxdepth: 2
 :hidden:
 
-projects/index
+inventory/index
 about/index
 help/index
 draft/index
