@@ -82,12 +82,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script src="../_static/translations.js"></script>
     <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".cell"
-        const thebe_selector_input = ".cell_input div.highlight"
-        const thebe_selector_output = ".cell_output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".cell"
+const thebe_selector_input = ".cell_input div.highlight"
+const thebe_selector_output = ".cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
@@ -300,6 +299,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../draft/python-dev.html">
+     Python 优质资料
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../draft/tools/index.html">
      常用工具
     </a>
@@ -434,8 +438,8 @@ conda activate mx
 </pre></div>
 </div>
 <div class="tabbed-set docutils">
-<input checked="checked" id="46edc341-8307-4ff8-be5d-a7af9df9ea61" name="d69fa26f-3b66-4b3b-831c-beba63826258" type="radio">
-</input><label class="tabbed-label" for="46edc341-8307-4ff8-be5d-a7af9df9ea61">
+<input checked="checked" id="80fbd7b7-5b91-4fb8-9bff-d2cb98a6cf59" name="76a300ea-5d22-4fd2-8f68-509f181ad708" type="radio">
+</input><label class="tabbed-label" for="80fbd7b7-5b91-4fb8-9bff-d2cb98a6cf59">
 GPU</label><div class="tabbed-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install <span class="nv">cudatoolkit</span><span class="o">=</span><span class="m">10</span>.2 <span class="c1">#（Windows）</span>
 pip install mxnet-cu102 <span class="c1"># （Windows）</span>
@@ -444,8 +448,8 @@ conda install <span class="nv">cudatoolkit</span><span class="o">=</span><span c
 </pre></div>
 </div>
 </div>
-<input id="a74627de-e042-44f8-bad4-7ee0c1ef7b2a" name="d69fa26f-3b66-4b3b-831c-beba63826258" type="radio">
-</input><label class="tabbed-label" for="a74627de-e042-44f8-bad4-7ee0c1ef7b2a">
+<input id="a74cd115-4c8b-4aa2-8821-0719d3b71d85" name="76a300ea-5d22-4fd2-8f68-509f181ad708" type="radio">
+</input><label class="tabbed-label" for="a74cd115-4c8b-4aa2-8821-0719d3b71d85">
 CPU</label><div class="tabbed-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install mxnet
 </pre></div>
@@ -465,8 +469,8 @@ conda activate tf
 </pre></div>
 </div>
 <div class="tabbed-set docutils">
-<input checked="checked" id="303138db-d83e-48ce-a7fd-795939004924" name="f5db4a83-8be3-4346-aab0-5147bdbcead9" type="radio">
-</input><label class="tabbed-label" for="303138db-d83e-48ce-a7fd-795939004924">
+<input checked="checked" id="6f4297a9-791f-4f4e-bc6e-ded1059803c1" name="bec6f293-10a5-43c9-a2ee-9857568d5edb" type="radio">
+</input><label class="tabbed-label" for="6f4297a9-791f-4f4e-bc6e-ded1059803c1">
 GPU</label><div class="tabbed-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install <span class="nv">cudatoolkit</span><span class="o">=</span><span class="m">11</span>.1 <span class="nv">cudnn</span><span class="o">=</span><span class="m">8</span> -c conda-forge
 </pre></div>
@@ -487,15 +491,15 @@ conda activate torch
 </pre></div>
 </div>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d74ec17d-4ccd-49f3-9647-f6bf14072957" name="2d5f9026-a794-46dd-bd00-4e2476b32985" type="radio">
-</input><label class="tabbed-label" for="d74ec17d-4ccd-49f3-9647-f6bf14072957">
+<input checked="checked" id="a2c2aa64-57a1-46e2-9b51-87d6ec077d22" name="f813658d-3640-4e24-9b58-58f4788732fb" type="radio">
+</input><label class="tabbed-label" for="a2c2aa64-57a1-46e2-9b51-87d6ec077d22">
 GPU</label><div class="tabbed-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install pytorch torchvision torchaudio <span class="nv">cudatoolkit</span><span class="o">=</span><span class="m">11</span>.1 -c pytorch -c conda-forge
 </pre></div>
 </div>
 </div>
-<input id="ecef7953-7ed8-4ee0-b587-8054230a8331" name="2d5f9026-a794-46dd-bd00-4e2476b32985" type="radio">
-</input><label class="tabbed-label" for="ecef7953-7ed8-4ee0-b587-8054230a8331">
+<input id="d5759d85-4922-437d-bab5-ea4ffe10c8ee" name="f813658d-3640-4e24-9b58-58f4788732fb" type="radio">
+</input><label class="tabbed-label" for="d5759d85-4922-437d-bab5-ea4ffe10c8ee">
 CPU</label><div class="tabbed-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install torch torchvision
 </pre></div>
